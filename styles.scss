@@ -13,7 +13,12 @@
 }
 
 // variables
+
 $default-border: 1px solid black;
+
+$max-page-width: 1336px;
+
+$mobile767: 767px;
 
 
 // ************************************************************
@@ -304,7 +309,7 @@ $default-border: 1px solid black;
         box-sizing: border-box;
         align-items: center;
 
-        @media (max-width: 767px) {
+        @media (max-width: $mobile767) {
             min-height: 310px;
             flex-direction: column;
             padding-left: 16px;
@@ -326,7 +331,7 @@ $default-border: 1px solid black;
                 letter-spacing: 0.05em;
                 color: #FFFFFF;
 
-                @media (max-width: 767px) {
+                @media (max-width: $mobile767) {
                     max-width: auto;
                     
                     font-size: 24px;
@@ -349,7 +354,7 @@ $default-border: 1px solid black;
                     max-width: 341px;
                 }
 
-                @media (max-width: 767px) {
+                @media (max-width: $mobile767) {
                     max-width: auto;
                     margin-bottom: 36px;
                     margin-top: 32px;
@@ -390,7 +395,7 @@ $default-border: 1px solid black;
         padding: 64px 113px 64px 113px;
         box-sizing: border-box;
 
-        @media (max-width: 767px) {
+        @media (max-width: $mobile767) {
             min-height: auto;
             padding: 32px 16px 32px 52px;
         }
@@ -449,9 +454,385 @@ $default-border: 1px solid black;
 }
 
 
+// ************************************************************
+
+// INDEX PAGE
 
 // ************************************************************
 
-// TABLET ADAPTIV
 
 // ************************************************************
+
+// TOP INDEX PAGE
+
+// ************************************************************
+
+// index-top-box
+
+.index-page-container {
+
+    .index-top-box {
+
+       .index-header-box {
+
+            .index-header-box-back1 {
+                background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+
+                .index-header-box-back2 {
+                    max-width: $max-page-width;
+                    margin: 0 auto;
+                    background-image: url(img/1.header/1.index/illustration.svg);
+                    background-repeat: no-repeat;
+                    background-size: 44%;
+                    background-position: right center;
+
+                    @media (max-width: 920px) {
+                        background-position: right 275px;
+                    }
+
+                    @media (max-width: $mobile767) {
+                        background: none;
+                    }
+
+                    .index-header-top-line {
+                        padding-top: 34px;
+                        padding-left: 113px;
+                        padding-right: 113px;
+                        padding-bottom: 107px;
+                        margin: 0 auto;
+                        // border: $default-border;
+                        max-width: $max-page-width;
+                        display: flex;
+                        justify-content: space-between;
+                        box-sizing: border-box;
+            
+                        @media (max-width: 1000px) {
+                            padding: 32px;
+                        }
+                    }
+                
+                    .index-header-content-box {
+                        max-width: $max-page-width;
+                        margin: 0 auto;
+                        padding-left: 113px;
+                        padding-right: 113px;
+                        padding-bottom: 190px;
+
+                        @media (max-width: $mobile767) {
+                            padding-left: 16px;
+                            padding-right: 16px;
+                            padding-bottom: 41px;
+                        }
+
+                        &-titlebox {
+                            width: 550px;
+                            padding-bottom: 32px;
+
+                            @media (max-width: $mobile767) {
+                                width: auto;
+                            }
+
+                            &-title {
+                                
+                                font-size: 64px;
+                                line-height: 74px;
+                                letter-spacing: 0.04em;
+                                color: #1F3F68;
+
+                                @media (max-width: $mobile767) {
+                                    font-size: 32px;
+                                    line-height: 37px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        &-textbox {
+                            width: 425px;
+                            padding-bottom: 71px;
+
+                            @media (max-width: 920px) {
+                                width: 400px;
+                            }
+
+                            @media (max-width: $mobile767) {
+                                width: auto;
+                                padding-bottom: 32px;
+                            }
+
+                            &-text {
+                                
+                                font-size: 16px;
+                                line-height: 26px;
+                                letter-spacing: 0.05em;
+                                color: #1F3F68;
+                                opacity: 0.6;
+
+                                @media (max-width: $mobile767) {
+                                    // font-size: 16px;
+                                    // line-height: 26px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        &-button {
+                            
+                            @media (max-width: $mobile767) {
+                                text-align: center;
+                            }
+
+                            &-b {
+                                padding: 15px 50px 15px 50px;
+                                background: #5A98D0;
+                                box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+                                border-radius: 10px;
+                                border: none;
+
+                                &-text {
+                                    
+                                    font-size: 16px;
+                                    line-height: 26px;
+                                    text-align: center;
+                                    letter-spacing: 0.04em;
+                                    color: #FFFFFF;
+                                }
+                            }
+                        }
+                    }
+                
+                
+                }
+            }
+       }
+       
+       .index-content-box {
+           max-width: $max-page-width;
+           margin: 0 auto;
+
+           .i_c_b-cards-box {
+               
+                &-titlebox {
+                   padding-top: 64px;
+                   padding-bottom: 64px;
+
+                   @media (max-width:1000px) {
+                        padding-bottom: 32px;
+                   }
+
+                   @media (max-width:$mobile767) {
+                        padding-top: 32px;
+                        padding-bottom: 0px;
+                    }
+                   
+
+                   &-title {
+                        padding-left: 32px;
+                        padding-right: 32px;
+                        font-size: 36px;
+                        line-height: 46px;
+                        text-align: center;
+                        letter-spacing: 0.05em;
+                        color: #000000;
+
+                        @media (max-width:$mobile767) {
+                            padding-left: 16px;
+                            padding-right: 16px;
+                            font-size: 24px;
+                            line-height: 28px;
+                       }
+                   }
+               }
+
+                &-card-box {
+                    padding-bottom: 64px;
+                    display: flex;
+                    justify-content: center;
+                    
+                    @media (max-width:1000px) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    &-card {
+                        max-width: 359px;
+                        padding: 32px;
+                        margin-left: 16px;
+                        margin-right: 16px;
+                        background: #FFFFFF;
+                        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+                        border-radius: 10px;
+                        box-sizing: border-box;
+
+                        @media (max-width:1000px) {
+                            flex-direction: column;
+                            align-items: center;
+                            margin-top: 32px;
+                        }
+                        
+                        &-imgbox {
+                            max-height: 120px;
+                            width: fit-content;
+                            margin: 0 auto;
+                        }
+
+                        &-titlebox {
+                            padding-top: 51px;
+                            padding-bottom: 14px;
+
+                            &-title {
+                                
+                                font-size: 20px;
+                                line-height: 30px;
+                                letter-spacing: 0.05em;
+                                color: #1F3F68;
+                            }
+                        }
+
+                        &-textbox {
+                            padding-bottom: 30px;
+
+                            &-text {
+                                font-size: 16px;
+                                line-height: 26px;
+                                letter-spacing: 0.05em;
+                                color: #1F3F68;
+                                opacity: 0.6;  
+                            }
+                        }
+
+                        &-linkgbox {
+                            &-link {
+                                text-decoration: none;
+                                font-size: 14px;
+                                line-height: 30px;
+                                letter-spacing: 0.05em;
+                                color: #5A98D0;
+                            }
+                        }
+                    
+                    }
+                }
+           }
+
+           .i_c_b-o_f_p-box {
+               &-titlebox {
+                    &-title {
+                        font-size: 36px;
+                        line-height: 46px;
+                        text-align: center;
+                        letter-spacing: 0.05em;
+                        color: #000000;
+                    
+                        @media (max-width:$mobile767) {
+                            font-size: 24px;
+                            line-height: 28px;
+                        }
+                   }
+               }
+
+               &-textbox {
+                    max-width: 750px;
+                    margin: 0 auto;
+                    padding-left: 32px;
+                    padding-right: 32px;
+                    padding-top: 32px;
+                    padding-bottom: 64px;
+
+                    @media (max-width:$mobile767) {
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        padding-top: 16px;
+                        padding-bottom: 32px;
+                    }
+
+                    &-text {
+                        font-size: 16px;
+                        line-height: 26px;
+                        text-align: center;
+                        letter-spacing: 0.05em;
+                        color: #222222;
+
+                        // @media (max-width:$mobile767) {
+                        //     font-size: 24px;
+                        //     line-height: 28px;
+                        // }
+                   }
+               }
+
+               &-bigimgbox {
+                    position: relative;
+                    max-width: fit-content;
+                    margin: 0 auto;
+                    padding-left: 16px;
+                    padding-right: 16px;
+
+                   &-tilebox {
+                        position: absolute;
+                        top: 64px;
+                        right: 64px;
+
+                        @media (max-width:$mobile767) {
+                            top: 32px;
+                            right: 32px;
+                       }
+
+                       &-title {
+                        font-size: 32px;
+                        line-height: 46px;
+                        text-align: right;
+                        letter-spacing: 0.05em;
+                        color: #FFFFFF;
+
+                        @media (max-width:$mobile767) {
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                       }   
+                   }
+               }
+
+               &-litleimgbox {
+                   display: flex;
+                   justify-content: center;
+                   padding-top: 16px;
+                   padding-bottom: 32px;
+
+                   @media (max-width:$mobile767) {
+                       flex-direction: column;
+                       align-items: center;
+                   }
+
+                   &-card {
+                       position: relative;
+                       max-width: 554px;
+                       padding: 16px;
+
+                       &-titlebox {
+                           position: absolute;
+                           top: 32px;
+                           left: 32px;
+                           
+                           @media (max-width:$mobile767) {
+                                top: 32px;
+                                left: 32px;
+                           }
+
+                           &-title {
+                            font-size: 28px;
+                            line-height: 46px;
+                            letter-spacing: 0.05em;
+                            color: #FFFFFF;
+
+                            @media (max-width:$mobile767) {
+                                font-size: 16px;
+                                line-height: 19px; 
+                            }
+                           }
+                       }
+                   }
+               }
+           }
+       }
+    }
+}
